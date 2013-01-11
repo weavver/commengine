@@ -1,0 +1,3 @@
+[submodule "vendors/freeswitch"]
+	path = vendors/freeswitch
+	url = git://git.freeswitch.org/freeswitch.git

@@ -1,0 +1,1302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{115827E8-1EB7-473C-A9FF-2E129CC262B8}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WeavverCommEngine</RootNamespace>
+    <AssemblyName>WeavverCommEngine</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FreeSWITCH.Managed, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>mod\FreeSWITCH.Managed.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ccnet.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="conf\extensions.conf" />
+    <None Include="conf\freeswitch.serial">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App-default.config" />
+    <None Include="conf\fur_elise.ttml" />
+    <None Include="conf\mime.types" />
+    <None Include="conf\notify-voicemail.tpl" />
+    <None Include="conf\tetris.ttml" />
+    <None Include="conf\voicemail.tpl" />
+    <None Include="conf\web-vm.tpl" />
+    <None Include="FreeSwitchConsole-NoNat.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\managed\ExampleScript.csx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="js.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="lua51.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="pocketsphinx.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="pthread.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scripts\queueposition.lua" />
+    <None Include="sphinxbase.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ssleay32.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_managed.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_commands.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_console.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_dialplan_xml.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_dptools.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_event_socket.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_logfile.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_loopback.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_PortAudio.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_sndfile.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_sofia.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="FreeSwitch.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\freeswitch.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="libapr.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="libaprutil.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="libbroadvoice.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="libeay32.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="libspandsp.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="libteletone.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sounds\en\us\callie\wvvr-absence.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-absenceRecorded.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-badID.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-badPasscode.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-enterID.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-enterPasscode.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-punchIn.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-punchOut.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-successfulLogin.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-successfulPunchIn.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-successfulPunchOut.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-welcome.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\ascii\8000\100.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\ascii\8000\101.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\ascii\8000\102.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\ascii\8000\103.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\ascii\8000\104.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\ascii\8000\105.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\ascii\8000\106.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\ascii\8000\107.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\ascii\8000\108.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\ascii\8000\109.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\ascii\8000\110.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\ascii\8000\111.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\ascii\8000\112.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\ascii\8000\113.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\ascii\8000\114.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\ascii\8000\115.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\ascii\8000\116.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\ascii\8000\117.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\ascii\8000\118.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\ascii\8000\119.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\ascii\8000\120.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\ascii\8000\121.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\ascii\8000\122.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\ascii\8000\32.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\ascii\8000\35.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\ascii\8000\42.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\ascii\8000\46.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\ascii\8000\97.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\ascii\8000\98.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\ascii\8000\99.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Resource Include="CruiseControl.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="conf\directory\default\1420.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="conf\sip_profiles\internal\qa-switchvox-free.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="conf\sip_profiles\internal\qa-switchvox-smb.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="conf\sip_profiles\internal\ivycrest.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="conf\sip_profiles\external\placeholder.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="conf\directory\default\qa.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="conf\dialplan\internal\qa.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="conf\dialplan\internal\apps.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="conf\sip_profiles\internal\qa-elastix.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="conf\directory\default\ivycrest.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="conf\directory\default\1423.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="conf\dialplan\internal\dialplan.xml" />
+    <Resource Include="conf\dialplan\qa\dialplan.xml" />
+    <Resource Include="conf\dialplan\external\weavver-apps.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="conf\directory\default\1427.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="conf\directory\default\1421.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="conf\directory\default\1426.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="conf\directory\default\1424.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="conf\directory\default\1425.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="sounds\en\us\callie\conference\8000\conf-alone.wav" />
+    <Content Include="sounds\en\us\callie\conference\8000\conf-bad-pin.wav" />
+    <Content Include="sounds\en\us\callie\conference\8000\conf-goodbye.wav" />
+    <Content Include="sounds\en\us\callie\conference\8000\conf-is-locked.wav" />
+    <Content Include="sounds\en\us\callie\conference\8000\conf-is-unlocked.wav" />
+    <Content Include="sounds\en\us\callie\conference\8000\conf-kicked.wav" />
+    <Content Include="sounds\en\us\callie\conference\8000\conf-locked.wav" />
+    <Content Include="sounds\en\us\callie\conference\8000\conf-muted.wav" />
+    <Content Include="sounds\en\us\callie\conference\8000\conf-pin.wav" />
+    <Content Include="sounds\en\us\callie\conference\8000\conf-unmuted.wav" />
+    <Content Include="sounds\en\us\callie\conference\8000\conf-welcome.wav" />
+    <Content Include="sounds\en\us\callie\currency\8000\and.wav" />
+    <Content Include="sounds\en\us\callie\currency\8000\cent.wav" />
+    <Content Include="sounds\en\us\callie\currency\8000\central.wav" />
+    <Content Include="sounds\en\us\callie\currency\8000\cents-per-minute.wav" />
+    <Content Include="sounds\en\us\callie\currency\8000\cents.wav" />
+    <Content Include="sounds\en\us\callie\currency\8000\dollar.wav" />
+    <Content Include="sounds\en\us\callie\currency\8000\dollars.wav" />
+    <Content Include="sounds\en\us\callie\currency\8000\minus.wav" />
+    <Content Include="sounds\en\us\callie\currency\8000\negative.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\0.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\1.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\10.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\11.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\12.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\13.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\14.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\15.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\16.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\17.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\18.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\19.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\2.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\20.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\3.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\30.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\4.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\40.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\5.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\50.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\6.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\60.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\7.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\70.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\8.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\80.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\9.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\90.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\dot.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\h-1.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\h-10.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\h-11.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\h-12.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\h-13.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\h-14.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\h-15.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\h-16.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\h-17.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\h-18.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\h-19.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\h-2.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\h-20.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\h-3.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\h-30.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\h-4.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\h-5.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\h-6.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\h-7.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\h-8.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\h-9.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\hundred.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\million.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\period.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\point.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\pound.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\star.wav" />
+    <Content Include="sounds\en\us\callie\digits\8000\thousand.wav" />
+    <Content Include="sounds\en\us\callie\directory\8000\dir-at_extension.wav" />
+    <Content Include="sounds\en\us\callie\directory\8000\dir-enter_person.wav" />
+    <Content Include="sounds\en\us\callie\directory\8000\dir-first_name.wav" />
+    <Content Include="sounds\en\us\callie\directory\8000\dir-for_next.wav" />
+    <Content Include="sounds\en\us\callie\directory\8000\dir-last_name.wav" />
+    <Content Include="sounds\en\us\callie\directory\8000\dir-letters_of_person_name.wav" />
+    <Content Include="sounds\en\us\callie\directory\8000\dir-no_matching_results.wav" />
+    <Content Include="sounds\en\us\callie\directory\8000\dir-no_more_results.wav" />
+    <Content Include="sounds\en\us\callie\directory\8000\dir-please_try_again.wav" />
+    <Content Include="sounds\en\us\callie\directory\8000\dir-result_match.wav" />
+    <Content Include="sounds\en\us\callie\directory\8000\dir-result_number.wav" />
+    <Content Include="sounds\en\us\callie\directory\8000\dir-specify_mininum.wav" />
+    <Content Include="sounds\en\us\callie\directory\8000\dir-start_new_search.wav" />
+    <Content Include="sounds\en\us\callie\directory\8000\dir-too_many_result.wav" />
+    <Content Include="sounds\en\us\callie\directory\8000\dir-to_search_by.wav" />
+    <Content Include="sounds\en\us\callie\directory\8000\dir-to_select_entry.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-accept_reject_voicemail.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-account_balance_is.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-account_number.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-any_other_digit.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-begin_recording.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-call.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-call_being_transferred.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-call_forwarding_has_been_cancelled.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-call_forwarding_has_been_set.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-call_from.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-connect_to_caller.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-customer_service.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-dnd_activated.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-dnd_cancelled.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-enjoy_music_while_transfer.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-enter_ext.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-enter_ext_pound.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-enter_queue_number.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-estimated_hold_time.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-extension_to_provision_this_phone.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-file.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-files.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-finished_pound_hash_key.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-first_name_first.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-followed_by_pound.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-for_directory_press.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-for_this_person.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-generic_greeting.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-hello.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-hold_connect_call.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-if_correct_press.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-if_not_press.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-im_sorry.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-incoming_call.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-in_line.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-last_name_first.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-less_than.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-more_than.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-not.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-no_menu_items.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-number.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-one_yes_two_no.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-operator.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-or.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-pin_or_extension_is-invalid.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-please.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-please_enter_extension_followed_by_pound.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-please_enter_pin_followed_by_pound.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-please_enter_the.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-please_enter_the_phone_number.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-please_reenter_your_pin.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-please_return_our_call_at.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-please_state_your_name_and_reason_for_calling.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-please_try_again.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-press_one_q_or_z.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-provision_phone_permanently_to_extension.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-recording_saved.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-regarding_reference_number.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-register_for_cluecon.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-sales.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-sample_submenu.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-save_review_record.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-say_name.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-send_to_voicemail.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-speak_to_a_customer_service_representative.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-spell_name.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-stay_on_line_call_answered_momentarily.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-take_a_message.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-technical_support.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-thank_you.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-thank_you_for_calling.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-thank_you_for_holding.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-that_was_an_invalid_entry.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-this_is_a_call_from.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-this_ivr_will_let_you_test_features.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-this_phone_will_now_reboot.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-to_call_the_freeswitch_conference.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-to_do_a_freeswitch_echo_test.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-to_do_a_fwd_echo_test.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-to_hear_sample_submenu.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-to_hear_screaming_monkeys.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-to_listen_to_moh.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-to_log_in.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-to_log_out.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-to_repeat_these_options.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-to_return_to_previous_menu.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-to_speak_with_an_operator.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-unable_save.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-use_telephone_keypad.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-using_telephone_keypad.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-welcome_to_freeswitch.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-you_are_about_to_provision_this_phone.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-you_are_now_logged_in.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-you_are_now_logged_out.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-you_are_number.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-you_have_dialed_an_invalid_extension.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-you_may.wav" />
+    <Content Include="sounds\en\us\callie\ivr\8000\ivr-you_may_exit_by_hanging_up.wav" />
+    <Content Include="sounds\en\us\callie\misc\8000\call_monitoring_blurb.wav" />
+    <Content Include="sounds\en\us\callie\misc\8000\call_secured.wav" />
+    <Content Include="sounds\en\us\callie\misc\8000\en.wav" />
+    <Content Include="sounds\en\us\callie\misc\8000\error.wav" />
+    <Content Include="sounds\en\us\callie\misc\8000\es.wav" />
+    <Content Include="sounds\en\us\callie\misc\8000\followed.wav" />
+    <Content Include="sounds\en\us\callie\misc\8000\if_you_are_this_person.wav" />
+    <Content Include="sounds\en\us\callie\misc\8000\if_you_would_like_to.wav" />
+    <Content Include="sounds\en\us\callie\misc\8000\invalid_extension.wav" />
+    <Content Include="sounds\en\us\callie\misc\8000\misc-your_call_has_been_terminated.wav" />
+    <Content Include="sounds\en\us\callie\misc\8000\misc-your_call_will_be_terminated_in.wav" />
+    <Content Include="sounds\en\us\callie\misc\8000\phone_not_auth.wav" />
+    <Content Include="sounds\en\us\callie\misc\8000\provide_reference_number.wav" />
+    <Content Include="sounds\en\us\callie\misc\8000\sorry.wav" />
+    <Content Include="sounds\en\us\callie\misc\8000\transfer1.wav" />
+    <Content Include="sounds\en\us\callie\misc\8000\transfer2.wav" />
+    <Content Include="sounds\en\us\callie\misc\8000\we_are_trying_to_reach.wav" />
+    <Content Include="sounds\en\us\callie\phonetic-ascii\8000\100.wav" />
+    <Content Include="sounds\en\us\callie\phonetic-ascii\8000\101.wav" />
+    <Content Include="sounds\en\us\callie\phonetic-ascii\8000\102.wav" />
+    <Content Include="sounds\en\us\callie\phonetic-ascii\8000\103.wav" />
+    <Content Include="sounds\en\us\callie\phonetic-ascii\8000\104.wav" />
+    <Content Include="sounds\en\us\callie\phonetic-ascii\8000\105.wav" />
+    <Content Include="sounds\en\us\callie\phonetic-ascii\8000\106.wav" />
+    <Content Include="sounds\en\us\callie\phonetic-ascii\8000\107.wav" />
+    <Content Include="sounds\en\us\callie\phonetic-ascii\8000\108.wav" />
+    <Content Include="sounds\en\us\callie\phonetic-ascii\8000\109.wav" />
+    <Content Include="sounds\en\us\callie\phonetic-ascii\8000\110.wav" />
+    <Content Include="sounds\en\us\callie\phonetic-ascii\8000\111.wav" />
+    <Content Include="sounds\en\us\callie\phonetic-ascii\8000\112.wav" />
+    <Content Include="sounds\en\us\callie\phonetic-ascii\8000\113.wav" />
+    <Content Include="sounds\en\us\callie\phonetic-ascii\8000\114.wav" />
+    <Content Include="sounds\en\us\callie\phonetic-ascii\8000\115.wav" />
+    <Content Include="sounds\en\us\callie\phonetic-ascii\8000\116.wav" />
+    <Content Include="sounds\en\us\callie\phonetic-ascii\8000\117.wav" />
+    <Content Include="sounds\en\us\callie\phonetic-ascii\8000\118.wav" />
+    <Content Include="sounds\en\us\callie\phonetic-ascii\8000\119.wav" />
+    <Content Include="sounds\en\us\callie\phonetic-ascii\8000\120.wav" />
+    <Content Include="sounds\en\us\callie\phonetic-ascii\8000\121.wav" />
+    <Content Include="sounds\en\us\callie\phonetic-ascii\8000\122.wav" />
+    <Content Include="sounds\en\us\callie\phonetic-ascii\8000\32.wav" />
+    <Content Include="sounds\en\us\callie\phonetic-ascii\8000\35.wav" />
+    <Content Include="sounds\en\us\callie\phonetic-ascii\8000\42.wav" />
+    <Content Include="sounds\en\us\callie\phonetic-ascii\8000\46.wav" />
+    <Content Include="sounds\en\us\callie\phonetic-ascii\8000\97.wav" />
+    <Content Include="sounds\en\us\callie\phonetic-ascii\8000\98.wav" />
+    <Content Include="sounds\en\us\callie\phonetic-ascii\8000\99.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\a-m.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\at.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\day-0.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\day-1.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\day-2.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\day-3.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\day-4.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\day-5.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\day-6.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\hour.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\hours.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\minute.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\minutes.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\mon-0.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\mon-1.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\mon-10.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\mon-11.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\mon-2.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\mon-3.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\mon-4.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\mon-5.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\mon-6.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\mon-7.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\mon-8.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\mon-9.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\oclock.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\oh.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\p-m.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\second.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\seconds.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\today.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\tomorrow.wav" />
+    <Content Include="sounds\en\us\callie\time\8000\yesterday.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-abort.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-advanced.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-advanced_alt.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-change_password.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-choose_greeting.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-choose_greeting_choose.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-choose_greeting_fail.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-continue.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-deleted.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-delete_message.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-delete_recording.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-emailed.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-enter_id.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-enter_pass.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-fail_auth.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-followed_by.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-followed_by_pound.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-forward_add_intro.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-forward_enter_ext.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-forward_to_email.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-from.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-goodbye.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-greeting.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-has_been_changed_to.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-hello.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-in_folder.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-last.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-listen_new.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-listen_saved.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-listen_to_recording.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-listen_to_recording_again.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-mailbox_full.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-main_menu.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-main_menu_alt.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-mark-urgent.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-marked-urgent.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-marked_new.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-mark_message_new.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-message.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-messages.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-messages_alt.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-message_alt.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-message_envelope.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-message_number.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-new.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-next.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-not_available.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-no_more_messages.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-person.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-play_greeting.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-play_next_message.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-play_previous_message.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-press.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-received.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-record_greeting.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-record_message.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-record_name1.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-record_name2.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-repeat_message.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-rerecord.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-return_call.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-saved.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-save_message.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-save_recording.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-selected.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-send_message_now.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-that_was_an_invalid_ext.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-too-small.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-to_exit.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-to_exit_alt.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-to_forward.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-to_record_greeting.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-tutorial_change_pin.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-tutorial_record_name.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-tutorial_yes_no.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-undeleted.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-undelete_message.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-urgent-new.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-urgent-saved.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-urgent.wav" />
+    <Content Include="sounds\en\us\callie\voicemail\8000\vm-you_have.wav" />
+    <None Include="sounds\en\us\callie\wvvr-CC-2012.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-CC-2014.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-CC-Cents.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-CC-Confirm.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-CC-DollarsAnd.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-CC-Enter3DigitSec.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-CC-Enter4DigitSec.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-CC-EnterAmount.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-CC-EnterCC.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-CC-EnterExpDate.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-CC-EnterID.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-CC-ExpirationDate.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-CC-InvalidAmount.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-CC-InvalidCC.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-CC-InvalidExpDate.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-CC-InvalidID.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-CC-january.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-CC-RequestedCharge.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-CC-September.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-CC-ThankYou.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="sounds\en\us\callie\wvvr-CC-Welcome.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="sounds\music\8000\danza-espanola-op-37-h-142-xii-arabesca.wav" />
+    <Content Include="sounds\music\8000\partita-no-3-in-e-major-bwv-1006-1-preludio.wav" />
+    <Content Include="sounds\music\8000\ponce-preludio-in-e-major.wav" />
+    <Content Include="sounds\music\8000\suite-espanola-op-47-leyenda.wav" />
+    <None Include="mod\FreeSWITCH.Managed.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_abstraction.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_amr.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_avmd.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_cdr_csv.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_celt.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_conference.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_curl.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_db.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_dialplan_asterisk.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_dialplan_directory.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_enum.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_esf.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_event_multicast.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_expr.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_fifo.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_fsv.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_g723_1.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_g729.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_h26x.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_hash.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_httapi.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_ilbc.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_lcr.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_local_stream.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_lua.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_native_file.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_nibblebill.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_pocketsphinx.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_rss.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_say_de.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_say_en.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_say_es.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_say_fr.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_say_it.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_say_nl.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_say_pt.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_say_ru.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_say_zh.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_silk.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_siren.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_snom.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_spandsp.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_speex.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_spidermonkey.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_spidermonkey_core_db.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_spidermonkey_odbc.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_spidermonkey_socket.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_spidermonkey_teletone.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_tone_stream.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_unimrcp.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_valet_parking.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_vmd.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_voicemail.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_xml_cdr.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_xml_curl.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\mod_xml_rpc.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\sofia.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\spandsp.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\spidermonkey.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\switch.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\syslog.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\timezones.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\tts_commandline.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\unicall.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\voicemail.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\voicemail_ivr.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\xml_cdr.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\xml_curl.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\xml_rpc.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\zeroconf.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\abstraction.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\acl.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\alsa.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\blacklist.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\callcenter.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\cdr_csv.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\cdr_mongodb.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\cdr_pg_csv.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\cdr_sqlite.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\cepstral.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\cidlookup.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\conference.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\console.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\db.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\dialplan_directory.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\directory.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\distributor.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\easyroute.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\enum.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\erlang_event.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\event_multicast.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\event_socket.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="conf\autoload_configs\fax.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\fifo.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\hash.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\httapi.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\http_cache.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\ivr.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\java.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\lcr.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\local_stream.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\logfile.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\lua.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\memcache.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\modules.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="conf\autoload_configs\mongo.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\nibblebill.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\opal.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\osp.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\perl.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\pocketsphinx.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\portaudio.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\post_load_modules.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\presence_map.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\python.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\redis.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\rss.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\rtmp.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\sangoma_codec.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\autoload_configs\shout.conf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Resource Include="conf\README_IMPORTANT.txt" />
+    <None Include="conf\vars.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="conf\dialplan\internal\default.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="conf\dialplan\internal\features.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\dialplan\external\default.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\ivr_menus\incoming.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\directory\default.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\sip_profiles\external.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="conf\sip_profiles\internal\qa-pbxiaf.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\sip_profiles\internal-ipv6.xml.noload">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\sip_profiles\internal.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\sip_profiles\internal\example.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\lang\de\de.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\lang\de\demo\demo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\lang\de\vm\sounds.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\lang\de\vm\tts.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\lang\en\demo\demo-ivr.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\lang\en\demo\demo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\lang\en\dir\sounds.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\lang\en\dir\tts.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\lang\en\en.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\lang\en\ivr\sounds.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\lang\en\vm\sounds.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\lang\en\vm\tts.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\lang\en\vm\voicemail_ivr.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\lang\fr\demo\demo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\lang\fr\dir\sounds.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\lang\fr\dir\tts.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\lang\fr\fr.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\lang\fr\vm\sounds.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\lang\he\demo\demo-ivr.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\lang\he\demo\demo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\lang\he\dir\sounds.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\lang\he\he.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\lang\he\vm\sounds.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\lang\ru\demo\demo-ivr.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\lang\ru\demo\demo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\lang\ru\dir\sounds.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\lang\ru\dir\tts.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\lang\ru\ru.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\lang\ru\vm\sounds.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\lang\ru\vm\tts.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="conf\chatplan\default.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="mod\managed\placeholder.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="FreeSwitchConsole.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="msmtp.exe" />
+    <Content Include="openssl.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WeavverLib\Weavver.Data.csproj">
+      <Project>{4D558303-3DB5-4004-91BA-9DB658199B7B}</Project>
+      <Name>Weavver.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
