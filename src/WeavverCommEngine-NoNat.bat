@@ -1,0 +1,2 @@
+﻿
+FreeSwitchConsole.exe -nonat

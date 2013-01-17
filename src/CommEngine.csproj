@@ -71,9 +71,11 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="ccnet.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="conf\dialplan\default\ideasip.com.noload" />
+    <None Include="conf\dialplan\default\pulver.com.noload" />
+    <None Include="conf\dialplan\default\sipbroker.com.noload" />
+    <None Include="conf\dialplan\default\sipphone.com.noload" />
+    <None Include="conf\dialplan\default\tollfreegateway.com.noload" />
     <None Include="conf\extensions.conf" />
     <None Include="conf\freeswitch.serial">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -85,9 +87,6 @@
     <None Include="conf\tetris.ttml" />
     <None Include="conf\voicemail.tpl" />
     <None Include="conf\web-vm.tpl" />
-    <None Include="FreeSwitchConsole-NoNat.bat">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="mod\managed\ExampleScript.csx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -302,12 +301,21 @@
     <None Include="sounds\en\us\callie\ascii\8000\99.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <Resource Include="CruiseControl.xml">
-      <SubType>Designer</SubType>
-    </Resource>
-    <Resource Include="conf\directory\default\1420.xml">
+    <Resource Include="conf\dialplan\default\00_ladspa.xml" />
+    <Resource Include="conf\dialplan\default\00_pizza_demo.xml" />
+    <Resource Include="conf\dialplan\default\01_example.com.xml" />
+    <Resource Include="conf\dialplan\default\01_Talking_Clock.xml" />
+    <Resource Include="conf\dialplan\public\00_inbound_did.xml" />
+    <Resource Include="conf\dialplan\default.xml" />
+    <Resource Include="conf\dialplan\features.xml" />
+    <Resource Include="conf\dialplan\public.xml" />
+    <Resource Include="conf\dialplan\weavver.xml" />
+    <Content Include="conf\directory\default\.gitignore" />
+    <Content Include="conf\sip_profiles\internal\.gitignore" />
+    <Content Include="conf\directory\default\1420.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+      <SubType>Designer</SubType>
+    </Content>
     <Resource Include="conf\sip_profiles\internal\qa-switchvox-free.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -334,32 +342,11 @@
     <Resource Include="conf\sip_profiles\internal\qa-elastix.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="conf\directory\default\ivycrest.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="conf\directory\default\1423.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="conf\dialplan\internal\dialplan.xml" />
     <Resource Include="conf\dialplan\qa\dialplan.xml" />
     <Resource Include="conf\dialplan\external\weavver-apps.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
-    </Resource>
-    <Resource Include="conf\directory\default\1427.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="conf\directory\default\1421.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="conf\directory\default\1426.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="conf\directory\default\1424.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="conf\directory\default\1425.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Content Include="sounds\en\us\callie\conference\8000\conf-alone.wav" />
     <Content Include="sounds\en\us\callie\conference\8000\conf-bad-pin.wav" />

@@ -22,7 +22,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>mod\managed\</OutputPath>
+    <OutputPath>..\build\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -88,7 +88,7 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WeavverLib\Weavver.Data.csproj">
+    <ProjectReference Include="..\vendors\weavver\data\src\Weavver.Data.csproj">
       <Project>{4D558303-3DB5-4004-91BA-9DB658199B7B}</Project>
       <Name>Weavver.Data</Name>
     </ProjectReference>

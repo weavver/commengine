@@ -1,0 +1,14 @@
+bin
+obj
+*.config
+*.suo
+*.snk
+build
+*.user
+log
+*.log
+recordings
+run
+db
+*.db
+!App-default.config
