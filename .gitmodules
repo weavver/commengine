@@ -1,3 +1,12 @@
 [submodule "vendors/freeswitch"]
 	path = vendors/freeswitch
 	url = git://git.freeswitch.org/freeswitch.git
+[submodule "vendors/weavver/data"]
+	path = vendors/weavver/data
+	url = http://github.com/weavver/data.git
+[submodule "vendors/weavver/vendors"]
+	path = vendors/weavver/vendors
+	url = http://github.com/weavver/vendors.git
+[submodule "vendors/weavver/net"]
+	path = vendors/weavver/net
+	url = http://github.com/weavver/net.git
