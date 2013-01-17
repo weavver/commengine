@@ -1,0 +1,10 @@
+<include>
+     <!--<gateway name='pbxiaf'>
+          <param name='realm' value='192.168.10.40' />
+          <param name='username' value='103' />
+          <param name='password' value='t3mp1234' />
+          <param name='extension' value='103' />
+          <param name="rtp-ip" value="192.168.10.213"/>
+          <param name="sip-ip" value="192.168.10.213"/>
+     </gateway>-->
+</include>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<section name="dialplan" description="Regex/XML Dialplan">
+     <context name="default">
+          <extension name="103">
+               <condition field="destination_number" expression="^103$">
+                    <action application="socket" data="localhost:5000 async full"/>
+                    <action application="hangup" />
+               </condition>
+          </extension>
+          <extension name="timeclock">
+               <condition field="destination_number" expression="^8463$">
+                    <action application="managed" data="Weavver.Interfaces.CommEngine.TimeClock"/>
+               </condition>
+          </extension>
+     </context>
+     <context name="public">
+          <extension name="103">
+               <condition field="destination_number" expression="^103$">
+                    <action application="socket" data="localhost:5000 async full"/>
+                    <action application="hangup" />
+                    <!--<action application="bridge" data="portaudio/auto_answer"/>-->
+                    <!--<action application="echo" />-->
+               </condition>
+          </extension>
+     </context>
+</section>

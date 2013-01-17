@@ -1,0 +1,102 @@
+     <include>
+     <extension name="unloop">
+          <condition field="${unroll_loops}" expression="^true$"/>
+          <condition field="${sip_looped_call}" expression="^true$">
+               <action application="deflect" data="${destination_number}"/>
+          </condition>
+     </extension>
+     <extension name="outside_call" continue="true">
+          <condition>
+               <action application="set" data="outside_call=true"/>
+               <action application="export" data="RFC2822_DATE=${strftime(%a, %d %b %Y %T %z)}"/>
+          </condition>
+     </extension>
+     <extension name="call_debug" continue="true">
+          <condition field="${call_debug}" expression="^true$" break="never">
+               <action application="info"/>
+          </condition>
+     </extension>
+     <extension name="public_did">
+          <condition field="destination_number" expression="^weavver|0000$">
+               <action application="answer" />
+               <action application="ivr" data="incoming" />
+               <!-- failover to the sales group -->
+               <action application="set" data="group=sales" />
+               <action application="bridge" data="group/${group}@${domain_name}"/>
+               <!--<action application="transfer" data="screencall XML public"/>-->
+               <action application="hangup" />
+          </condition>
+     </extension>
+     <extension name="sales">
+          <condition field="destination_number" expression="^sales$">
+               <action application="set" data="group=sales" />
+               <action application="transfer" data="screencall XML external"/>
+          </condition>
+     </extension>
+     <extension name="support">
+          <condition field="destination_number" expression="^support$">
+               <action application="set" data="group=support" />
+               <action application="transfer" data="screencall XML external"/>
+          </condition>
+     </extension>
+     <extension name="accounting">
+          <condition field="destination_number" expression="^accounting$">
+               <action application="set" data="group=accounting" />
+               <action application="transfer" data="screencall XML external"/>
+          </condition>
+     </extension>
+     <extension name="screencall">
+          <condition field="destination_number" expression="^screencall$">
+               <action application="set" data="call_screen_filename=C:/tmp/${caller_id_number}-callscreening.wav"/>
+               <action application="set" data="hangup_after_bridge=true" />
+               <action application="answer"/>
+               <action application="sleep" data="500"/>
+               <action application="phrase" data="voicemail_record_name"/>
+               <action application="playback" data="tone_stream://%(500, 0, 640)" />
+               <action application="set" data="instant_ringback=true"/>
+               <action application="set" data="ringback=%(2000,4000,440.0,480.0)" />
+               <action application="set" data="playback_terminators=#*0123456789" />
+               <action application="record" data="${call_screen_filename} 7 200 2" />
+               <action application="set" data="group_confirm_key=1" />
+               <action application="set" data="fail_on_single_reject=false" />
+               <action application="set" data="group_confirm_file=phrase:screen_confirm:${call_screen_filename}" />
+               <action application="set" data="continue_on_fail=true" />
+
+               <!--<action application="set" data="result=${luarun(voiceprompts.lua  ${uuid} ${queue_name})}"/>-->
+
+               <action application="bridge" data="group/${group}@${domain_name}"/>
+               <action application="bridge" data="sofia/gateway/ivycrest/17147268071"/>
+          </condition>
+     </extension>
+     <extension name="public_extensions">
+          <condition field="destination_number" expression="^(14[123][0-9])$">
+               <action application="transfer" data="$1 XML default"/>
+          </condition>
+     </extension>
+
+     <!--<extension name="authorized_user">
+          <condition field="${sip_authorized}" expression="true">
+               <anti-action application="log" data="INFO Context: ${user_context}"/>
+               <anti-action application="reject" data="407"/>
+          </condition>
+          <condition field="${username}" expression="^mythicalbox$">
+               <action application="answer" />
+               <action application="log" data="INFO $user_data(${context})"/>
+               <action application="log" data="INFO ${sip_authorized}"/>
+               <action application="transfer" data="${destination_number} XML internal"/>
+          </condition>
+     </extension>-->
+
+     <extension name="echo">
+          <condition field="destination_number" expression="^9195|echo$">
+               <action application="answer"/>
+               <action application="info"/>
+               <action application="log" data="INFO authorized: [${sip_authorized}]"/>
+               <action application="log" data="INFO sip username: [${sip_auth_username}]"/>
+               <action application="log" data="INFO authed by: [${sip_acl_authed_by}]"/>
+               <action application="log" data="INFO username: [${username}]"/>
+               <action application="log" data="INFO DIALING Extension [${destination_number}]"/>
+               <action application="echo" data=""/>
+          </condition>
+     </extension>
+</include>

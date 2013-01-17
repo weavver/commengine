@@ -1,0 +1,27 @@
+<include>
+     <extension name="timeclock">
+          <condition field="destination_number" expression="^8463$">
+               <action application="managed" data="TimeClock"/>
+          </condition>
+     </extension>
+     <extension name="receivepayment">
+          <condition field="destination_number" expression="^7968$">
+               <action application="set" data="ReferenceId=FromNode1" />
+               <action application="set" data="OrganizationId=0baae579-dbd8-488d-9e51-dd4dd6079e95" />
+               <!--<action application="set" data="Balance=10.45" />-->
+               <action application="set" data="UserCode=1234" />
+               <action application="set" data="PassCode=1003" />
+               <action application="set" data="CardNumber=4007000000037" />
+               <action application="set" data="CardExpiration=0120" />
+               <action application="set" data="CardCode=123" />
+               <action application="managed" data="ReceivePayment"/>
+               <action application="log" data="INFO PaymentStatus: ${PaymentStatus}" />
+               <action application="log" data="INFO PaymentAmount: ${PaymentAmount}" />
+               <action application="log" data="INFO ResponseCode: ${ResponseCode}" />
+               <action application="log" data="INFO Message: ${Message}" />
+               <action application="log" data="INFO TransactionId: ${TransactionId}" />
+               <action application="hangup" />
+          </condition>
+     </extension>
+</include>
+<!--<action application="bridge" data="portaudio/auto_answer"/>-->

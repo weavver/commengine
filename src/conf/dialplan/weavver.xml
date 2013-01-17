@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<include>
+     <context name="default">
+          <extension name="testapp">
+               <condition field="destination_number" expression="^8463$">
+                    <action application="managed" data="Weavver.Interfaces.CommEngine.TimeClock"/>
+                    <action application="echo" data="Weavver.Interfaces.CommEngine.TimeClock"/>
+               </condition>
+          </extension>
+     </context>
+</include>

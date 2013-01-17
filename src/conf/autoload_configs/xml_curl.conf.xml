@@ -1,0 +1,16 @@
+<configuration name="xml_curl.conf" description="cURL XML Gateway">
+     <bindings>
+          <binding name="backup directory binding">
+               <param name="gateway-url" value="http://127.0.0.1/vendors/freeswitch/directory.aspx" bindings="directory"/>
+               <param name="timeout" value="5000"/>
+          </binding>
+          <binding name="directory binding">
+               <param name="gateway-url" value="http://127.0.0.1/vendors/freeswitch/directory" bindings="directory"/>
+               <param name="timeout" value="1000"/>
+          </binding>
+          <!--<binding name="dialplan binding">
+               <param name="gateway-url" value="http://www.weavver.com/vendors/freeswitch/dialplan" bindings="dialplan"/>
+               <param name="timeout" value="5000"/>
+          </binding>-->
+     </bindings>
+</configuration>

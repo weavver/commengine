@@ -1,0 +1,68 @@
+<include>
+     <menu name="incoming"
+         greet-long="ivr/weavver-incoming.wav"
+         greet-short="ivr/weavver-incoming.wav"
+         invalid-sound="ivr/ivr-that_was_an_invalid_entry.wav"
+         exit-sound="voicemail/vm-goodbye.wav"
+         confirm-macro=""
+         confirm-key=""
+         tts-engine="flite"
+         tts-voice="rms"
+         confirm-attempts="3"
+         timeout="10000"
+         inter-digit-timeout="2000"
+         max-failures="3"
+         max-timeouts="3"
+         digit-len="4">
+
+          <!--
+               Script: This call may be recored for quality assurance.
+               Thank you for Calling Weavver.
+               If you know the extension of the party you wish to call you may dial it at any time.
+               Press 1 for Support (good customer service comes first!)
+               2 for Sales
+               3 to make an Account Payment
+               4 for the Accounting department
+               or 5 for the time clock demo
+          -->
+          <entry action="menu-exec-app" digits="1" param="transfer support XML external"/> <!-- support -->
+          <entry action="menu-exec-app" digits="2" param="transfer sales XML external"/> <!-- sales -->
+          <!-- pay my bill -->
+          <entry action="menu-exec-app" digits="3" param="transfer 7968 XML external"/>
+          <entry action="menu-exec-app" digits="4" param="transfer 8463 XML external"/> <!-- time clock -->
+          
+          <entry action="menu-exec-app" digits="/^(14[0-9])$/" param="transfer $1 XML features"/>
+          <entry action="menu-top" digits="9"/>
+     </menu>
+
+     <!-- Demo IVR, Sub Menu -->
+     <menu name="sales"
+         greet-long="phrase:demo_ivr_sub_menu"
+         greet-short="phrase:demo_ivr_sub_menu_short"
+         invalid-sound="ivr/ivr-that_was_an_invalid_entry.wav"
+         exit-sound="voicemail/vm-goodbye.wav"
+         timeout="15000"
+         max-failures="3"
+         max-timeouts="3">
+
+          <!-- The demo IVR sub menu prompt basically just says, "press star to return to previous menu..." -->
+          <entry action="menu-top" digits="*"/>
+     </menu>
+
+
+     <!-- TTS sample; non-functional but it demonstrates say: and TTS -->
+     <!--
+  <menu name="demo3"
+      greet-long="say:Press 1 to join the conference, Press 2 to join the other conference"
+      greet-short="say:Press 1 to join the conference, Press 2 to join the other conference"
+      invalid-sound="say:invalid extension"
+      exit-sound="say:exit sound"
+      timeout ="15000"
+      max-failures="3">
+    <entry action="menu-exit" digits="*"/>
+    <entry action="menu-play-sound" digits="1" param="say:You pressed 1"/>
+    <entry action="menu-exec-app" digits="2" param="transfert 1000 XML default"/>
+    <entry action="menu-exec-app" digits="3" param="transfert 1001 XML default"/>
+  </menu>
+-->
+</include>

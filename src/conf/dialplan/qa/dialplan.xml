@@ -1,0 +1,26 @@
+﻿<include>
+     <extension name="4001-inbound">
+          <condition field="destination_number" expression="^4001$">
+               <action application="sched_hangup" data="+10" />
+               <action application="answer" />
+               <action application="echo" data=""/>
+               <action application="hangup" />
+          </condition>
+     </extension>
+     <extension name="4002-inbound">
+          <condition field="destination_number" expression="^4002$">
+               <action application="sched_hangup" data="+10" />
+               <action application="answer" />
+               <action application="echo" data="" />
+               <action application="hangup" />
+          </condition>
+     </extension>
+     <extension name="qa-virtualSoftphone">
+          <condition field="destination_number" expression="^virtualSoftphone$">
+               <action application="sched_hangup" data="+40" />
+               <action application="answer" />
+               <action application="echo" data=""/>
+               <action application="hangup" />
+          </condition>
+     </extension>
+</include>

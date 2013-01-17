@@ -1,0 +1,22 @@
+<include>
+  <gateway name='4001'>
+    <param name='realm' value='192.168.10.40' />
+    <param name='rtp-ip' value='192.168.10.40'/>
+    <param name='sip-ip' value='192.168.10.40'/>
+    <param name='username' value='4001' />
+    <param name='password' value='ps8s0m' />
+    <param name='context' value='qa' />
+    <param name='dialplan' value='xml' />
+    <param name='register' value='true' />
+  </gateway>
+  <gateway name='4002'>
+    <param name='realm' value='192.168.10.40' />
+    <param name='rtp-ip' value='192.168.10.40'/>
+    <param name='sip-ip' value='192.168.10.40'/>
+    <param name='username' value='4002' />
+    <param name='password' value='ps8s0m' />
+    <param name='context' value='qa' />
+    <param name='dialplan' value='xml' />
+    <param name='register' value='true' />
+  </gateway>
+</include>

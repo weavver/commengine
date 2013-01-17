@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<include>
+     <!--we dial out 4002 to ring 4001-->
+     <extension name="4001-outbound">
+          <!--<condition field="caller_id_number" expression="^142[0-9]$" />-->
+          <condition field="destination_number" expression="^4001$">
+               <action application="answer" />
+               <action application="bridge" data="sofia/gateway/4002/4001"/>
+               <action application="hangup" />
+          </condition>
+     </extension>
+     <!--we dial out 4001 to ring 4002-->
+     <extension name="4002-outbound">
+          <!--<condition field="caller_id_number" expression="^142[0-9]$" />-->
+          <condition field="destination_number" expression="^4002$">
+               <action application="answer" />
+               <action application="bridge" data="sofia/gateway/4001/4002" />
+               <action application="hangup" />
+          </condition>
+     </extension>
+</include>

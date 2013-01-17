@@ -1,0 +1,4 @@
+﻿*.xml
+!placeholder.xml
+!qa-switchvox-free.xml
+!qa-switchvox-smb.xml
